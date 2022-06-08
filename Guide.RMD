@@ -55,15 +55,15 @@ In order for knitr to correctly recognize it, the page break character must be:
 
 The character to use depends on the document output format:
 
-- For Word and PDF documents, use `\pagebreak` (alternatively, `\newpage` also works)
+- For Word and PDF documents, use `\newpage` (alternatively, `\pagebreak` also works, but any text on the page will be justified on the page)
 - For HTML presentations (e.g., ioslides, slidy, beamer), use `---`
     - **NOTE:** `---` is the HTML code for a horizontal line, which the HTML 
     presentations interpret as the page break.
 
-To complicate matters, `\pagebreak` will produce a new page/slide in an HTML 
-presentation, but *only* when used outside of an R code block. `\pagebreak` will
-not work if used programmatically from inside an R code block. You can use both
-`\pagebreak` and `---` inside a single HTML presentation Markdown document without
+To complicate matters, `\newpage\` and `\pagebreak` will produce a new page/slide in an HTML 
+presentation, but *only* when used outside of an R code block. `\newpage\` and `\pagebreak` will
+not work if used programmatically from inside an R code block. You can use 
+`\newpage\`, `\pagebreak`, and `---` inside a single HTML presentation Markdown document without
 any issue, as long as they are used in the appropriate situations.
 
 We are getting a head of ourselves, but note that if you are making plots within
